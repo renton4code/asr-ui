@@ -1,0 +1,24 @@
+[
+   {
+      "name": "kaldi",
+      "settings": [
+         {
+            "name": "console-flags",
+            "title": "Console Flags",
+            "type": "string",
+            "defaultValue": "--use-param-x"
+         }
+      ]
+   },
+   {
+      "name": "kaldi2",
+      "settings": [
+         {
+            "name": "console-flags",
+            "title": "Console Flags",
+            "type": "string",
+            "defaultValue": "--use-param-x"
+         }
+      ]
+   }
+]
