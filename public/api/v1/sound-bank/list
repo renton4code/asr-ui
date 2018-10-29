@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "sound1",
+    "duration": 180000,
+    "relatedSound": [ 2 ]
+  },
+  {
+    "id": 2,
+    "title": "sound1 with wind distortion",
+    "duration": 180000
+  },
+  {
+    "id": 3,
+    "title": "sound2",
+    "duration": 185100
+  }
+]

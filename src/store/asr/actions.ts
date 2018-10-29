@@ -7,7 +7,7 @@ import { RootState } from '../types';
 export const actions: ActionTree<AsrState, RootState> = {
     getAvailableAsrList({ commit }): any {
         return axios({
-            url: '/api/v1/get-available-asr-list/',
+            url: '/api/v1/asr/list/',
         })
           .then((response) => {
               const payload: AsrPreset[] = response && response.data;

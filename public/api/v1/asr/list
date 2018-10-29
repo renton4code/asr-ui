@@ -1,0 +1,43 @@
+[
+   {
+      "name": "kaldi",
+      "settings": [
+         {
+            "name": "console-flags",
+            "title": "Console Flags",
+            "type": "text",
+            "defaultValue": "--use-param-x"
+         },
+         {
+            "name": "threshold",
+            "title": "Some Numeric option",
+            "type": "number",
+            "defaultValue": 200
+         },
+         {
+            "name": "use-cuda",
+            "title": "Use CUDA",
+            "type": "checkbox",
+            "defaultValue": false
+         },
+         {
+            "name": "threads",
+            "title": "Threads selection",
+            "type": "select",
+            "options": [ 2, 4, 8],
+            "defaultValue": 4
+         }
+      ]
+   },
+   {
+      "name": "kaldi2",
+      "settings": [
+         {
+            "name": "console-flags",
+            "title": "Console Flags",
+            "type": "string",
+            "defaultValue": "--use-param-x"
+         }
+      ]
+   }
+]
