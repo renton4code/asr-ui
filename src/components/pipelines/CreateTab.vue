@@ -3,7 +3,7 @@
     v-if="isLoading"
     class="mdl-progress mdl-js-progress mdl-progress__indeterminate centered"
   ></div>
-  <div v-else class="settings-layout">
+  <div v-else class="create-pipeline-layout">
     <div>
       <h4>Create a pipeline</h4>
       <table class="mdl-data-table mdl-shadow--2dp">
@@ -49,7 +49,7 @@
           class="run-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
           @click="runPipeWithConfig"
         >
-          Run
+          Create
         </button>
       </div>
     </div>
@@ -59,15 +59,15 @@
 <script lang="ts">
 
 import { State, Action, Getter } from 'vuex-class';
-import { AsrState, AsrPreset, Setting } from '../store/asr/types';
-import { SoundBankState, Sound } from '../store/sound-bank/types';
+import { AsrState, AsrPreset, Setting } from '../../store/asr/types';
+import { SoundBankState, Sound } from '../../store/sound-bank/types';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 // removes vue oservers
 const nonReactive = (_: any): any => JSON.parse(JSON.stringify(_));
 
 @Component
-export default class SettingsTab extends Vue {
+export default class CreatePipelineTab extends Vue {
 
   public currentAsr: string | null = null;
   public selectedSound: number | null = null;
@@ -106,7 +106,7 @@ export default class SettingsTab extends Vue {
     }));
     const { selectedSound } = this;
 
-    console.log(config, selectedSound);
+    console.log({ config, sound: selectedSound });
     // TODO: implement
   }
 
@@ -150,7 +150,7 @@ export default class SettingsTab extends Vue {
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-  .settings-layout
+  .create-pipeline-layout
     display: flex
     flex-direction: column
     align-items: center

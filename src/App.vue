@@ -8,12 +8,13 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">ASR TestKit</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Create a pipeline</a>
+        <a href="/pipelines/create" class="mdl-navigation__link">Create a pipeline</a>
+        <a href="/pipelines/list" class="mdl-navigation__link">Pipelines</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
       <div class="page-content">
-        <SettingsTab />
+        <router-view></router-view>
       </div>
     </main>
   </div>
@@ -21,13 +22,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import SettingsTab from './components/SettingsTab.vue';
 
-@Component({
-  components: {
-    SettingsTab,
-  },
-})
+@Component
 export default class App extends Vue {}
 </script>
 
